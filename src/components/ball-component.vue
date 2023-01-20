@@ -23,10 +23,11 @@ export default {
   border-radius: 50%;
   position: relative;
   box-shadow: 0px 0px 0px 2px #ffffff;
+  filter: drop-shadow(0px 3px 5px #8a8a8a);
 }
 
 .inner-circle {
-  background-color: white;
+  background-color: #fffcf3;
   height: 50%;
   width: 50%;
   border-radius: 50%;
@@ -34,11 +35,12 @@ export default {
   font-family: Cantarell, Calibri;
   font-weight: bold;
   text-align: center;
-  font-size: 26px;
+  font-size: 22px;
   top: 50%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  user-select: none;
 }
 
 .ball-1 {

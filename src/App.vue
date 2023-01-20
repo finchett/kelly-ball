@@ -4,7 +4,7 @@ import NumberDisplay from "./components/number-display.vue";
 export default {
   data() {
     return {
-      numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+      numbers: [12, 6, 10],
     };
   },
   components: {
@@ -22,15 +22,32 @@ export default {
       />
     </head>
     <body>
-      <h1>hello</h1>
-      <p>This website is for kellyball</p>
+      <h1>Kelly Ball</h1>
+      <h2>Players</h2>
+      <h2>Balls</h2>
       <NumberDisplay :numbers="numbers"></NumberDisplay>
+      <NumberDisplay :numbers="numbers"></NumberDisplay>
+      <NumberDisplay :numbers="numbers"></NumberDisplay>
+      <h2>Rules</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </p>
+      <footer>
+        <p>Author: Sam Finchett</p>
+      </footer>
     </body>
   </html>
 </template>
 
 <style>
 body {
-  background-color: rgb(77, 88, 98);
+  background-color: rgb(255, 255, 255);
+  align-items: center;
 }
 </style>
