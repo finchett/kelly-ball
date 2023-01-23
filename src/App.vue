@@ -5,13 +5,16 @@ import NumberPicker from "./components/number-picker.vue";
 export default {
   data() {
     return {
-      numbers: [12, 6, 10],
+      numbers: [12, 6, 10, 11],
+      ballCount: 2,
+      playerCount: 2,
     };
   },
   components: {
     NumberDisplay,
     NumberPicker,
   },
+  methods: {},
 };
 </script>
 <template>
@@ -24,24 +27,26 @@ export default {
       />
     </head>
     <body>
-      <h1>Kelly Ball</h1>
-      <h2>Balls</h2>
-      <NumberDisplay :numbers="numbers"></NumberDisplay>
+      <h1>Kelly Ball 🎱</h1>
       <NumberPicker item-name="How many players?"></NumberPicker>
-      <NumberPicker item-name="How many balls?"></NumberPicker>
-      <!-- <h2>Rules</h2>
+      <NumberPicker
+        item-name="How many balls?"
+        @select="(picked) => (ballCount = picked)"
+      ></NumberPicker>
+      <!-- <NumberDisplay :numbers="numbers"></NumberDisplay> -->
+      <h2>Rules</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
+        <list>
+          <li>
+            Players will get <mark>{{ ballCount }}</mark> balls.
+          </li>
+          <li>Don't reveal your balls.</li>
+          <li>If all your balls are sunk, you lose.</li>
+          <li>Last player left wins.</li>
+        </list>
       </p>
-      <footer>
-        <p>Author: Sam Finchett</p>
-      </footer> -->
+
+      <button class="play-button">Play</button>
     </body>
   </html>
 </template>
@@ -51,5 +56,21 @@ body {
   display: block;
   background-color: rgb(100, 255, 255);
   align-items: center;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+.play-button {
+  padding: 10px;
+  width: 60px;
+}
+
+mark {
+  background: none;
+  font-weight: bold;
+  color: blue;
 }
 </style>

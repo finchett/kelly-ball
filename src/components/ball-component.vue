@@ -35,7 +35,7 @@ export default {
   font-family: Cantarell, Calibri;
   font-weight: bold;
   text-align: center;
-  font-size: 22px;
+  font-size: 21px;
   top: 50%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
