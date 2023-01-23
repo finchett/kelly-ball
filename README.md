@@ -2,7 +2,7 @@
 
 TODO:
 selector-component:
-A common selector ranging from 1 - 6:
+A common selector ranging from 1 - 6:  (done)
 - for players
 - for ball count
 in:
