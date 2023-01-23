@@ -64,11 +64,17 @@ export default {
 }
 
 .selected {
+  /* filter needed for safari rendering */
+  filter: drop-shadow(0px 0px 0px #8a8a8a);
   transition: all 0.3s ease-in-out;
+  animation: none;
 }
 
 .unselected {
+  /* filter needed for safari rendering */
+  filter: drop-shadow(0px 0px 0px #8a8a8a);
   transition: all 0.3s ease-in-out;
-  opacity: calc(0.5);
+  opacity: calc(0.2);
+  animation: none;
 }
 </style>

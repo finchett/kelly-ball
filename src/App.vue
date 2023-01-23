@@ -5,7 +5,7 @@ import NumberPicker from "./components/number-picker.vue";
 export default {
   data() {
     return {
-      numbers: [12, 6, 10, 11],
+      numbers: [15],
       ballCount: 2,
       playerCount: 2,
     };
