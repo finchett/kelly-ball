@@ -1,5 +1,6 @@
 <script>
 import NumberDisplay from "./components/number-display.vue";
+import NumberPicker from "./components/number-picker.vue";
 
 export default {
   data() {
@@ -9,6 +10,7 @@ export default {
   },
   components: {
     NumberDisplay,
+    NumberPicker,
   },
 };
 </script>
@@ -23,12 +25,11 @@ export default {
     </head>
     <body>
       <h1>Kelly Ball</h1>
-      <h2>Players</h2>
       <h2>Balls</h2>
       <NumberDisplay :numbers="numbers"></NumberDisplay>
-      <NumberDisplay :numbers="numbers"></NumberDisplay>
-      <NumberDisplay :numbers="numbers"></NumberDisplay>
-      <h2>Rules</h2>
+      <NumberPicker item-name="How many players?"></NumberPicker>
+      <NumberPicker item-name="How many balls?"></NumberPicker>
+      <!-- <h2>Rules</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -40,14 +41,15 @@ export default {
       </p>
       <footer>
         <p>Author: Sam Finchett</p>
-      </footer>
+      </footer> -->
     </body>
   </html>
 </template>
 
 <style>
 body {
-  background-color: rgb(255, 255, 255);
+  display: block;
+  background-color: rgb(100, 255, 255);
   align-items: center;
 }
 </style>

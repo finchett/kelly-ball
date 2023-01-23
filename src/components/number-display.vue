@@ -3,16 +3,6 @@ import BallComponent from "./ball-component.vue";
 
 export default {
   props: ["numbers"],
-  data() {
-    return {
-      button: 0,
-    };
-  },
-  methods: {
-    doNothing() {
-      this.button += 1;
-    },
-  },
   components: {
     BallComponent,
   },
@@ -21,7 +11,6 @@ export default {
 
 <template>
   <div class="shelf">
-    <p>{{ button }}</p>
     <span v-for="number in numbers" :key="number">
       <BallComponent
         @click="doNothing"
