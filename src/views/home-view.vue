@@ -37,10 +37,14 @@ export default {
       <input type="hidden" name="balls" :value="ballCount" />
       <NumberPicker
         item-name="How many players?"
+        :min="1"
+        :max="4"
         @select="(picked) => (playerCount = picked)"
       ></NumberPicker>
       <NumberPicker
         item-name="How many balls?"
+        :min="1"
+        :max="6"
         @select="(picked) => (ballCount = picked)"
       ></NumberPicker>
       <!-- <NumberDisplay :numbers="numbers"></NumberDisplay> -->

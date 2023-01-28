@@ -1,6 +1,10 @@
 <script>
 export default {
-  props: ["itemName"],
+  props: {
+    itemName: String,
+    min: Number,
+    max: Number,
+  },
   emits: ["select"],
   data() {
     return {
@@ -32,7 +36,7 @@ export default {
 <template>
   <h2>{{ this.itemName }}</h2>
   <span
-    v-for="n in 6"
+    v-for="n in max"
     v-bind:key="n"
     @click="submit(n)"
     :class="[card, selected(n)]"

@@ -11,6 +11,8 @@ export default {};
 
 <style>
 .player-card {
-  background-color: blue;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  min-height: 300px;
 }
 </style>
