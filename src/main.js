@@ -6,8 +6,16 @@ import Play from "./views/play-view.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
-  { path: "/", name: "Home", component: Home },
-  { path: "/play", name: "Play", component: Play },
+  {
+    path: "/",
+    name: "Home",
+    component: Home,
+  },
+  {
+    path: "/play",
+    name: "Play",
+    component: Play,
+  },
 ];
 
 const router = createRouter({
