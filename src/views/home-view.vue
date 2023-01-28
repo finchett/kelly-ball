@@ -6,8 +6,8 @@ export default {
   data() {
     return {
       numbers: [15],
-      ballCount: 2,
-      playerCount: 2,
+      ballCount: null,
+      playerCount: null,
     };
   },
   components: {
@@ -16,7 +16,9 @@ export default {
   },
   methods: {
     play() {
-      this.$router.push("play");
+      if (this.ballCount && this.playerCount) {
+        this.$router.push("play");
+      }
     },
   },
 };
@@ -52,7 +54,7 @@ export default {
       <p>
         <list>
           <li>
-            Players will get <mark>{{ ballCount }}</mark> balls.
+            Players will get <mark>{{ ballCount || 2 }}</mark> balls.
           </li>
           <li>Don't reveal your balls.</li>
           <li>If all your balls are sunk, you lose.</li>
