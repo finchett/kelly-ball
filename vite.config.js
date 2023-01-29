@@ -9,10 +9,5 @@ export default defineConfig({
     host: true,
   },
   plugins: [vue()],
-  resolve: {
-    alias: {
-      "@": fileURLToPath(new URL("./src", import.meta.url)),
-    },
-  },
   base: "/kelly-ball/",
 });
