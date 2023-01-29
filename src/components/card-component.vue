@@ -24,7 +24,7 @@ export default {
       :class="{ hidden: isHidden }"
       class="player-card"
     >
-      <div class="player-card-title">Player N</div>
+      <div class="player-card-title"></div>
       <div class="player-card-ball-display">
         <slot />
       </div>
@@ -37,9 +37,9 @@ export default {
 .player-card {
   background-color: whitesmoke;
   border-radius: 10px;
-  min-height: 300px;
   display: flex;
   flex-direction: column;
+  height: fit-content;
 }
 
 .hidden {
