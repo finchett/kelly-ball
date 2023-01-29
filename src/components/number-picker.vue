@@ -36,13 +36,13 @@ export default {
 <template>
   <h2>{{ this.itemName }}</h2>
   <span
-    v-for="n in max"
+    v-for="n in max - min + 1"
     v-bind:key="n"
-    @click="submit(n)"
-    :class="[card, selected(n)]"
-    :style="getLightColor(n)"
+    @click="submit(n + min - 1)"
+    :class="[card, selected(n + min - 1)]"
+    :style="getLightColor(n + min - 1)"
   >
-    {{ n }}
+    {{ n + min - 1 }}
   </span>
 </template>
 

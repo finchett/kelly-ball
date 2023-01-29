@@ -1,13 +1,16 @@
 <script>
 import NumberDisplay from "../components/number-display.vue";
 import NumberPicker from "../components/number-picker.vue";
+import { GenerateGame } from "../modules/Game";
+import { store } from "../store/store.js";
 
 export default {
   data() {
     return {
+      store,
       numbers: [15],
       ballCount: null,
-      playerCount: null,
+      playerCount: 2,
     };
   },
   components: {
@@ -17,6 +20,7 @@ export default {
   methods: {
     play() {
       if (this.ballCount && this.playerCount) {
+        this.store.playerCards = GenerateGame(this.ballCount, this.playerCount);
         this.$router.push("play");
       }
     },
@@ -39,14 +43,14 @@ export default {
       <input type="hidden" name="balls" :value="ballCount" />
       <NumberPicker
         item-name="How many players?"
-        :min="1"
+        :min="2"
         :max="4"
         @select="(picked) => (playerCount = picked)"
       ></NumberPicker>
       <NumberPicker
         item-name="How many balls?"
         :min="1"
-        :max="6"
+        :max="Math.floor(15 / playerCount)"
         @select="(picked) => (ballCount = picked)"
       ></NumberPicker>
       <!-- <NumberDisplay :numbers="numbers"></NumberDisplay> -->
