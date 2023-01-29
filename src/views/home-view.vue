@@ -20,7 +20,7 @@ export default {
   methods: {
     play() {
       if (this.ballCount && this.playerCount) {
-        this.store.playerCards = GenerateGame(this.ballCount, this.playerCount);
+        this.store.playerCards = GenerateGame(this.playerCount, this.ballCount);
         this.$router.push("play");
       }
     },
@@ -50,7 +50,7 @@ export default {
       <NumberPicker
         item-name="How many balls?"
         :min="1"
-        :max="Math.floor(15 / playerCount)"
+        :max="Math.min(Math.floor(15 / playerCount), 6)"
         @select="(picked) => (ballCount = picked)"
       ></NumberPicker>
       <!-- <NumberDisplay :numbers="numbers"></NumberDisplay> -->
