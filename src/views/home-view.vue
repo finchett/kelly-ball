@@ -9,8 +9,8 @@ export default {
     return {
       store,
       numbers: [15],
-      ballCount: null,
-      playerCount: 2,
+      ballCount: 2,
+      playerCount: null,
     };
   },
   components: {
@@ -23,6 +23,11 @@ export default {
         this.store.playerCards = GenerateGame(this.playerCount, this.ballCount);
         this.$router.push("play");
       }
+    },
+  },
+  computed: {
+    maxBallCount() {
+      return Math.min(Math.floor(15 / this.playerCount), 6);
     },
   },
 };
@@ -50,8 +55,9 @@ export default {
       <NumberPicker
         item-name="How many balls?"
         :min="1"
-        :max="Math.min(Math.floor(15 / playerCount), 6)"
+        :max="maxBallCount"
         @select="(picked) => (ballCount = picked)"
+        :start-selected="ballCount"
       ></NumberPicker>
       <!-- <NumberDisplay :numbers="numbers"></NumberDisplay> -->
       <h2>Rules</h2>

@@ -4,11 +4,12 @@ export default {
     itemName: String,
     min: Number,
     max: Number,
+    startSelected: Number,
   },
   emits: ["select"],
   data() {
     return {
-      selection: null,
+      selection: null || this.startSelected,
       card: "card",
     };
   },
@@ -29,6 +30,10 @@ export default {
 
       return n == this.selection ? "selected" : "unselected";
     },
+  },
+  beforeUpdate() {
+    this.selection = Math.min(this.selection, this.max);
+    this.submit(this.selection);
   },
 };
 </script>
