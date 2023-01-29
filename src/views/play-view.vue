@@ -31,9 +31,11 @@ export default {
   <div>
     <Carousel>
       <Slide v-for="slide in store.playerCards.length" :key="slide">
-        <NumberDiplay
-          :numbers="store.playerCards[slide - 1].numbers"
-        ></NumberDiplay>
+        <CardComponent>
+          <NumberDiplay
+            :numbers="store.playerCards[slide - 1].numbers"
+          ></NumberDiplay>
+        </CardComponent>
       </Slide>
 
       <template #addons>
