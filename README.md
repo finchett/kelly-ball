@@ -14,4 +14,5 @@ in:
 - emblem (enum 1-6)
 - click to show/hide
 
+
 A carousel component for switching between cards.
