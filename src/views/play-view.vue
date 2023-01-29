@@ -28,17 +28,19 @@ export default {
 </script>
 
 <template>
-  <Carousel>
-    <Slide v-for="slide in store.playerCards.length" :key="slide">
-      <NumberDiplay
-        :numbers="store.playerCards[slide - 1].numbers"
-      ></NumberDiplay>
-    </Slide>
+  <div>
+    <Carousel>
+      <Slide v-for="slide in store.playerCards.length" :key="slide">
+        <NumberDiplay
+          :numbers="store.playerCards[slide - 1].numbers"
+        ></NumberDiplay>
+      </Slide>
 
-    <template #addons>
-      <Navigation />
-    </template>
-  </Carousel>
+      <template #addons>
+        <Navigation />
+      </template>
+    </Carousel>
+  </div>
 </template>
 
 <style>
