@@ -23,6 +23,7 @@ const routes = [
 ];
 
 const router = createRouter({
+  // Github pages is only compatible with web hash history
   history: createWebHashHistory(),
   routes,
 });
