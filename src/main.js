@@ -1,5 +1,9 @@
 import { createApp } from "vue";
-import { createRouter, createWebHistory } from "vue-router";
+import {
+  createRouter,
+  createWebHashHistory,
+  createWebHistory,
+} from "vue-router";
 import App from "./App.vue";
 import Home from "./views/home-view.vue";
 import Play from "./views/play-view.vue";
@@ -19,7 +23,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes,
 });
 

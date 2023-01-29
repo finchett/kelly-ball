@@ -10,4 +10,5 @@ export default defineConfig({
   },
   plugins: [vue()],
   base: "/kelly-ball/",
+  //base: "/",
 });
