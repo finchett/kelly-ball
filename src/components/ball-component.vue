@@ -16,7 +16,7 @@ export default {
   </div>
 </template>
 
-<style>
+<style scoped>
 .ball {
   width: 70px;
   height: 70px;

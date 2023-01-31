@@ -51,7 +51,7 @@ export default {
   </span>
 </template>
 
-<style>
+<style scoped>
 .card {
   display: inline-flex;
   margin: 5px;

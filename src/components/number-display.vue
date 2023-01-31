@@ -21,7 +21,7 @@ export default {
   </div>
 </template>
 
-<style>
+<style scoped>
 @keyframes wiggle {
   0% {
     transform: rotate(0deg);
@@ -47,5 +47,6 @@ export default {
 
 .shelf {
   display: flex;
+  flex-direction: column;
 }
 </style>

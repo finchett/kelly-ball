@@ -19,6 +19,11 @@ export default {
       store,
     };
   },
+  methods: {
+    back() {
+      this.$router.replace("/");
+    },
+  },
   mounted() {
     if (this.store.playerCards.length == 0) {
       this.$router.replace("/");
@@ -28,23 +33,26 @@ export default {
 </script>
 
 <template>
-  <div>
-    <Carousel>
-      <Slide v-for="slide in store.playerCards.length" :key="slide">
-        <div>
-          Player {{ slide }}
-          <CardComponent>
-            <NumberDiplay
-              :numbers="store.playerCards[slide - 1].numbers"
-            ></NumberDiplay>
-          </CardComponent>
-        </div>
-      </Slide>
+  <div style="height: 100vh">
+    <div class="carousel-container">
+      <Carousel>
+        <Slide v-for="slide in store.playerCards.length" :key="slide">
+          <div class="slide">
+            <div class="slide-title">Player {{ slide }}</div>
+            <CardComponent>
+              <NumberDiplay
+                :numbers="store.playerCards[slide - 1].numbers"
+              ></NumberDiplay>
+            </CardComponent>
+          </div>
+        </Slide>
 
-      <template #addons>
-        <Navigation />
-      </template>
-    </Carousel>
+        <template #addons>
+          <Navigation />
+        </template>
+      </Carousel>
+    </div>
+    <button @click="back" class="back-button">Back</button>
   </div>
 </template>
 
@@ -59,7 +67,28 @@ export default {
   align-items: center;
 }
 
+.slide-title {
+  padding-bottom: 30px;
+  font-weight: bold;
+}
+
+.slide {
+  position: relative;
+  margin: 25%;
+}
+
 .carousel__slide {
   padding: 10px;
+}
+
+.carousel-container {
+  background-color: whitesmoke;
+  border-radius: 20px;
+}
+
+.back-button {
+  padding: 10px;
+  width: 60px;
+  margin: 5%;
 }
 </style>
