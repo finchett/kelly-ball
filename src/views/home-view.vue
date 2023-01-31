@@ -27,7 +27,7 @@ export default {
   },
   computed: {
     maxBallCount() {
-      return Math.min(Math.floor(15 / this.playerCount), 6);
+      return Math.min(Math.floor(15 / this.playerCount), 4);
     },
   },
 };
