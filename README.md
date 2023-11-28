@@ -2,4 +2,4 @@
 
 A number generator for playing kelly ball.
 
-https://sfinche.github.io/kelly-ball/#/
+https://finchett.github.io/kelly-ball/#/
