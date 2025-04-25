@@ -83,7 +83,6 @@ export default {
 }
 
 .carousel-container {
-  /*  */
   border-radius: 20px;
 }
 
@@ -105,7 +104,6 @@ export default {
   background-color: #222;
 }
 
-
 .play-div {
   height: 100%;
   margin: auto;
@@ -121,6 +119,7 @@ export default {
   text-align: center;
   width: fit-content;
   margin: 1rem auto;
+  margin-top: 30px;
 }
 
 </style>

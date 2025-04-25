@@ -110,9 +110,9 @@ export default {
 
 .progress-bar {
   position: absolute;
-  bottom: -50px;
+  bottom: -40px;
   left: 0;
-  height: 6px;
+  height: 3px;
   background-color: rgba(0, 0, 0, 0.2);
   animation: progressAnim 3s linear forwards;
   width: 80%;
