@@ -33,16 +33,14 @@ export default {
 </script>
 
 <template>
-  <div style="height: 100vh">
+  <div class="play-div">
     <div class="carousel-container">
       <Carousel>
         <Slide v-for="slide in store.playerCards.length" :key="slide">
           <div class="slide">
             <div class="slide-title">Player {{ slide }}</div>
-            <CardComponent>
-              <NumberDiplay
-                :numbers="store.playerCards[slide - 1].numbers"
-              ></NumberDiplay>
+            <CardComponent :player="slide">
+              <NumberDiplay :numbers="store.playerCards[slide - 1].numbers"></NumberDiplay>
             </CardComponent>
           </div>
         </Slide>
@@ -52,6 +50,10 @@ export default {
         </template>
       </Carousel>
     </div>
+    <div class="info-box">
+      Swipe to go to the next player.
+    </div>
+
     <button @click="back" class="back-button">Back</button>
   </div>
 </template>
@@ -59,12 +61,12 @@ export default {
 <style>
 .carousel__item {
   min-height: 200px;
-  width: 100%;
   font-size: 20px;
   border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
+  max-height: 100px;
 }
 
 .slide-title {
@@ -74,7 +76,6 @@ export default {
 
 .slide {
   position: relative;
-  margin: 25%;
 }
 
 .carousel__slide {
@@ -82,13 +83,44 @@ export default {
 }
 
 .carousel-container {
-  background-color: whitesmoke;
+  /*  */
   border-radius: 20px;
 }
 
 .back-button {
-  padding: 10px;
-  width: 60px;
-  margin: 5%;
+  display: block;
+  margin: 2rem auto;
+  padding: 0.6rem 1.2rem;
+  width: fit-content;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
+
+.back-button:hover {
+  background-color: #222;
+}
+
+
+.play-div {
+  height: 100%;
+  margin: auto;
+}
+
+.info-box {
+  background-color: #e0f2ff;
+  color: #0369a1;
+  padding: 0.75rem 1.25rem;
+  border-radius: 7px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  width: fit-content;
+  margin: 1rem auto;
+}
+
 </style>

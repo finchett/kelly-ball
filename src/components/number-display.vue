@@ -41,7 +41,7 @@ export default {
 }
 
 .ball {
-  margin: 10px;
+  margin: 8px;
   animation: wiggle 2.5s infinite;
 }
 

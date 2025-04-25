@@ -18,12 +18,12 @@ export default {
 
 <style scoped>
 .ball {
-  width: 70px;
-  height: 70px;
+  width: 65px;
+  height: 65px;
   border-radius: 50%;
   position: relative;
-  box-shadow: 0px 0px 0px 2px #ffffff;
-  filter: drop-shadow(0px 3px 5px #8a8a8a);
+  box-shadow: 0px 0px 0px 4px hsla(0, 0%, 100%, 1);
+  filter: drop-shadow(0px 2px 5px hsla(0, 0%, 54%, 0.3));
 }
 
 .inner-circle {
@@ -32,7 +32,6 @@ export default {
   width: 50%;
   border-radius: 50%;
   position: absolute;
-  font-family: Cantarell, Calibri;
   font-weight: bold;
   text-align: center;
   font-size: 21px;

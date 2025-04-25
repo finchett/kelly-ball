@@ -81,6 +81,7 @@ body {
   display: block;
   align-items: center;
   text-align: center;
+  height: max-content;
 }
 
 li {
@@ -88,8 +89,17 @@ li {
 }
 
 .play-button {
-  padding: 10px;
-  width: 60px;
+  display: block;
+  margin: 2rem auto;
+  padding: 0.6rem 1.2rem;
+  width: fit-content;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
 mark {
